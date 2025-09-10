@@ -13,4 +13,4 @@ select
 from {{ref('staging_airports')}}
 )
 select *
-from airports_reorder;
+from airports_reorder
