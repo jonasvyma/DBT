@@ -10,10 +10,7 @@ select
 	tz,
 	dst,
 	city
-from
-	{{ref('staging_airports')}}
+from {{ref('staging_airports')}}
 )
-select
-	*
-from
-	airports_reorder;
+select *
+from airports_reorder;
