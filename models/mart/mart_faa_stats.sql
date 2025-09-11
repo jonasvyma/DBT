@@ -7,7 +7,7 @@ select
 	sum(pf.diverted) dep_diverted,
 	count(dep_time) dep_n_flights
 from
-	{{ref(prep_flights)}} as pf
+	{{ref('prep_flights')}} as pf
 group by
 	origin
 	),
@@ -20,7 +20,7 @@ select
 	sum(pf.diverted) arr_diverted,
 	count(arr_time) arr_n_flights
 from
-	{{ref(prep_flights)}} as pf
+	{{ref('prep_flights')}} as pf
 group by
 	dest
 	),
@@ -45,6 +45,6 @@ join arrivals a
 	*
 from
 	total_stats ts
-join {{ref(prep_airports)}} as a on
+join {{ref('prep_airports')}} as a on
 	ts.airport_code = a.faa
 
