@@ -39,9 +39,7 @@ join arrivals a
 		using (airport_code)
 	)
 	select
-	a.city,
-	a.country,
-	a.name,
+	
 	*
 from
 	total_stats ts
